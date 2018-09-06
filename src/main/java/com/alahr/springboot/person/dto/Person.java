@@ -1,4 +1,4 @@
-package com.alahr.springboot.person.domain;
+package com.alahr.springboot.person.dto;
 
 import java.math.BigInteger;
 

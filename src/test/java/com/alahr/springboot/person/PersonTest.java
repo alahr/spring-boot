@@ -1,6 +1,6 @@
 package com.alahr.springboot.person;
 
-import com.alahr.springboot.person.domain.Person;
+import com.alahr.springboot.person.dto.Person;
 import com.alahr.springboot.person.service.PersonService;
 import org.junit.After;
 import org.junit.Before;

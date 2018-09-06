@@ -1,6 +1,6 @@
 package com.alahr.springboot.person.service;
 
-import com.alahr.springboot.person.domain.Person;
+import com.alahr.springboot.person.dto.Person;
 import com.alahr.springboot.person.mapper.PersonMapper;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;

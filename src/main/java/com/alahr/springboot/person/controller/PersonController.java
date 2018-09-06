@@ -1,6 +1,6 @@
 package com.alahr.springboot.person.controller;
 
-import com.alahr.springboot.person.domain.Person;
+import com.alahr.springboot.person.dto.Person;
 import com.alahr.springboot.person.service.PersonService;
 import com.github.pagehelper.PageInfo;
 import org.slf4j.Logger;

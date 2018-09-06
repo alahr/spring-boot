@@ -1,6 +1,6 @@
 package com.alahr.springboot.person.mapper;
 
-import com.alahr.springboot.person.domain.Person;
+import com.alahr.springboot.person.dto.Person;
 import org.apache.ibatis.annotations.*;
 
 import java.math.BigInteger;
