@@ -2,10 +2,12 @@ package com.alahr.springboot.person.controller;
 
 import com.alahr.springboot.person.dto.Person;
 import com.alahr.springboot.person.service.PersonService;
+import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigInteger;
@@ -17,6 +19,9 @@ public class PersonController {
 
     @Autowired
     private PersonService personService;
+
+    @Value("${alahr.person.desc}")
+    private String desc;
 
     @RequestMapping(value = "/")
     public String home(){
@@ -47,5 +52,12 @@ public class PersonController {
     @RequestMapping(value = "/removeById")
     public int removeById(@RequestParam(value = "id")BigInteger id){
         return personService.removeById(id);
+    }
+
+    @RequestMapping(value = "/jsonStr", method = RequestMethod.POST)
+    public String jsonStr(@RequestBody JSONObject json){
+        logger.info("param from properties file:{}", desc);
+        logger.info("json str: {}-{}", json.getString("name"), json.get("address"));
+        return json.toJSONString();
     }
 }
