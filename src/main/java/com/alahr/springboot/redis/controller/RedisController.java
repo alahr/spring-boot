@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/redis")
 public class RedisController {
-    private Logger logger = LoggerFactory.getLogger(RestController.class);
+    private Logger logger = LoggerFactory.getLogger(RedisController.class);
 
     @Autowired
     private RedisService redisService;
