@@ -3,6 +3,8 @@
 ####详细配置信息见application*文件中
 ##log日志
 ####info、error日志分开生成日志文件，周期为30天
+##redis
+####StringRedisTemplate, RedisTemplate
 
 #功能
 ##home
