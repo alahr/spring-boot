@@ -31,6 +31,8 @@ public class RedisTest {
         p.setAddress("shanghai");
         p.setBirthday("1998-12-23");
 
+        logger.info(p.toString());
+
         redisService.set("alahr", JSON.parseObject(JSON.toJSONString(p)));
 
         JSONObject json = (JSONObject)redisService.get("alahr");

@@ -1,5 +1,7 @@
 package com.alahr.springboot.person.dto;
 
+import com.alibaba.fastjson.JSONObject;
+
 import java.io.Serializable;
 import java.math.BigInteger;
 
@@ -54,10 +56,6 @@ public class Person implements Serializable{
 
     @Override
     public String toString() {
-        return "id:"+id+", "
-                +"name:"+name+", "
-                +"birthday"+birthday+", "
-                +"gender:"+gender+", "
-                +"address:"+address;
+        return JSONObject.toJSONString(this);
     }
 }
