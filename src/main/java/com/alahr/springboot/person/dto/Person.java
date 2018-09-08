@@ -1,8 +1,11 @@
 package com.alahr.springboot.person.dto;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 
-public class Person {
+public class Person implements Serializable{
+    private static final long serialVersionUID = 1L;
+
     private BigInteger id;
     private String name;
     private String birthday;
@@ -47,5 +50,14 @@ public class Person {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "id:"+id+", "
+                +"name:"+name+", "
+                +"birthday"+birthday+", "
+                +"gender:"+gender+", "
+                +"address:"+address;
     }
 }
