@@ -1,11 +1,11 @@
 package com.alahr.springboot.realm;
 
-import com.alahr.springboot.system.dto.SysResourceDto;
-import com.alahr.springboot.system.dto.SysRoleDto;
-import com.alahr.springboot.system.dto.SysUserDto;
-import com.alahr.springboot.system.service.SysResourceService;
-import com.alahr.springboot.system.service.SysRoleService;
-import com.alahr.springboot.system.service.SysUserService;
+import com.alahr.springboot.module.system.dto.SysResourceDto;
+import com.alahr.springboot.module.system.dto.SysRoleDto;
+import com.alahr.springboot.module.system.dto.SysUserDto;
+import com.alahr.springboot.module.system.service.SysResourceService;
+import com.alahr.springboot.module.system.service.SysRoleService;
+import com.alahr.springboot.module.system.service.SysUserService;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
