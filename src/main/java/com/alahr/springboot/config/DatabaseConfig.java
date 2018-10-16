@@ -13,7 +13,7 @@ import org.springframework.core.env.Environment;
 
 import javax.sql.DataSource;
 
-@ComponentScan
+@ComponentScan(value = "com.alahr.springboot")
 @Configuration
 public class DatabaseConfig {
     private Logger logger = LoggerFactory.getLogger(DatabaseConfig.class);
