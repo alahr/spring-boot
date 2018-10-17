@@ -1,4 +1,9 @@
 #Spring boot
+##directory说明
+config:配置目录
+module:功能开发
+realm:数据库realm
+util:工具类
 ##mysql、page helper
 详细配置信息见application*文件中
 ##log日志
@@ -7,6 +12,7 @@ info、error日志分开生成日志文件，周期为30天
 StringRedisTemplate, RedisTemplate
 ##swagger2
 接口管理
+访问链接为http://localhost:8080/swagger-ui.html
 ##JWT
 json web token仅为工具类，没有和spring boot集成
 
