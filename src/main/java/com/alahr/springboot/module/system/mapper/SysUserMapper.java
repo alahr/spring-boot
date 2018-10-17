@@ -9,6 +9,8 @@ import java.util.List;
 
 @Mapper
 public interface SysUserMapper {
+    @Select("select * from sys_user where user_name = #{userName}")
+    SysUserDto getByUsername(@Param("userName") String userName);
 
     @Select("select password from sys_user where user_name = #{userName}")
     String getPasswordByUsername(@Param("userName") String userName);

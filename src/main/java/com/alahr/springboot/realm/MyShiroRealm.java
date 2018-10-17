@@ -14,11 +14,16 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.annotation.Resource;
+import java.math.BigInteger;
 import java.util.List;
 
 public class MyShiroRealm extends AuthorizingRealm {
+    private Logger logger = LoggerFactory.getLogger(MyShiroRealm.class);
+
     @Resource
     public SysUserService sysUserService;
     @Resource
@@ -32,7 +37,10 @@ public class MyShiroRealm extends AuthorizingRealm {
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
-        SysUserDto user = (SysUserDto) principals.getPrimaryPrincipal();
+        String username = (String) principals.getPrimaryPrincipal();
+        logger.info("username is {}.", username);
+
+        SysUserDto user = sysUserService.getByUsername(username);
         List<SysRoleDto> roleDtos = sysRoleService.findRolesBySysUserId(user.getId());
         roleDtos.stream().forEach(role -> {
             authorizationInfo.addRole(role.getRoleName());

@@ -15,6 +15,11 @@ public class SysUserServiceImpl implements SysUserService {
     private SysUserMapper sysUserMapper;
 
     @Override
+    public SysUserDto getByUsername(String username) {
+        return sysUserMapper.getByUsername(username);
+    }
+
+    @Override
     public String getPasswordByUsername(String username) {
         return sysUserMapper.getPasswordByUsername(username);
     }
