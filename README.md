@@ -1,5 +1,5 @@
 #Spring boot
-
+```
 ##directory说明
 config:配置目录
 module:功能开发
@@ -24,8 +24,9 @@ json web token仅为工具类，没有和spring boot集成
 
 ##shiro
 控制用户登录及角色、权限管理
-
+```
 #功能
+```
 ##home
 设置默认URL
 ##person
@@ -38,3 +39,4 @@ JSONObject的存取
 修改spring.profiles.active为dev,test,prod，就分别切换为开发、测试、生产
 ##spring boot启动时指定
 java -jar spring-boot-1.0-SNAPSHOT.jar --spring.profile.active=test或dev或prod
+```
