@@ -15,13 +15,13 @@ public interface PersonMapper {
     Person getById(@Param("id") BigInteger id);
 
     @Insert("insert into person " +
-            "(name, birthday, gender, address) " +
+            "(card, name, birthday, gender, address) " +
             "values " +
-            "(#{name}, #{birthday}, #{gender}, #{address})")
+            "(#{card}, #{name}, #{birthday}, #{gender}, #{address})")
     int add(Person p);
 
     @Update("update person set " +
-                "name=#{name}, birthday=#{birthday}, " +
+                "card=#{card}, name=#{name}, birthday=#{birthday}, " +
                 "gender=#{gender}, address=#{address} " +
             "where id=#{id}")
     int update(Person p);
